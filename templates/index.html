@@ -1,0 +1,12 @@
+<h1>Adivinhe o Número que estou pensando!</h1>
+<h3>Digite um número e eu direi se é maior ou menor do que eu pensei.</h3>
+<form method="POST">
+    <div><label>Entre com um número entre 0 e 500<input type="number" name="numero"></label></div>
+    <input type="submit" value="Enviar">
+</form>
+<form action="/generate">
+    <input type="submit" value="Gerar novo número" />
+</form>
+{% if not first_connection %}
+    <h1>O número que eu pensei é {{ string }}</h1>
+{% endif %}
